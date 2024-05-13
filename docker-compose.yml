@@ -32,7 +32,7 @@ services:
     volumes:
       - s3data:/data
     ports:
-      - "9000:9000"
+      - "9001:9000"
     environment:
       MINIO_ROOT_USER: ${MINIO_ROOT_USER}
       MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD}    
@@ -61,7 +61,7 @@ services:
       - REDIS__PORT=6379
       - ELASTICSEARCH__URL=http://elasticsearch:9200
       - MINIO__ENDPOINT=minio
-      - MINIO__PORT=9000
+      - MINIO__PORT=9001
       - MINIO__USE_SSL=false
       - MINIO__ACCESS_KEY=${MINIO_ROOT_USER}
       - MINIO__SECRET_KEY=${MINIO_ROOT_PASSWORD}
